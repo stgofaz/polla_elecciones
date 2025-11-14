@@ -4,7 +4,7 @@ let CANDIDATES = [];
 let REAL_VALUES = {};
 
 // Hora de disclosure (ajústala si quieres)
-const DISCLOSURE_TIME = new Date("2025-11-14T00:45:00-03:00");
+const DISCLOSURE_TIME = new Date("2025-11-16T16:00:00-03:00");
 
 function parsePercentValue(raw) {
   if (!raw) return NaN;

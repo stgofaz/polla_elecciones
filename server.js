@@ -11,10 +11,15 @@ const PORT = process.env.PORT || 3000;
 
 // Candidatos (defínelos aquí una sola vez)
 const CANDIDATES = [
-  "Candidatura A",
-  "Candidatura B",
-  "Candidatura C",
-  "Candidatura D"
+  "Franco Parisi",
+  "Jeannette Jara",
+  "Marco Enriquez-Ominami",
+  "Johannes Kaiser"
+  "José Antonio Kast",
+  "Eduardo Artés"
+  "Evelyn Mathei",
+  "Harold Mayne-Nicholls",
+  "Blanco/Nulo",
 ];
 
 const EXCEL_PATH = path.join(__dirname, "polla_rommel_resultados.xlsx");
