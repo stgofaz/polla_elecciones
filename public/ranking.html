@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ranking Polla Rommel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="ranking.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-flag"></div>
+      <div class="brand-text">
+        <span class="brand-title">Ranking &amp; Pronósticos</span>
+        <span class="brand-subtitle">Polla Elecciones 2025 de Rommel</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-container">
+    <section class="card">
+      <h2>Resultados registrados / Ranking público</h2>
+      <p class="lead">
+        Aquí se muestran los resultados reales, los pronósticos de todos los participantes
+        y el ranking ordenado según qué tan cerca estuvo cada uno:
+      </p>
+      <p class="lead">
+        <code>Puntaje = √( ∑ (Predicción − Real)² )</code><br />
+        Al igual que en el Golf, mientras más bajo tu puntaje, mejor!
+      </p>
+
+      <div class="results-wrapper">
+        <div id="results-overlay" class="results-overlay">
+          <div class="overlay-content">
+            <p>
+              Los resultados se desbloquearán el<br />
+              <strong>14 de noviembre a las 00:45</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="results-table-container">
+          <table id="results-table" class="summary-table results-table"></table>
+        </div>
+      </div>
+
+      <p class="note">
+        La primera fila muestra los <strong>resultados reales</strong> cargados por el administrador.<br />
+        La última columna es el <strong>puntaje</strong> de cada participante.<br />
+      </p>
+
+      <div class="actions-row">
+        <a href="/" class="btn btn-secondary">Volver a la Polla</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Polla Elecciones 2025 de Rommel · Ranking público</span>
+  </footer>
+</body>
+</html>

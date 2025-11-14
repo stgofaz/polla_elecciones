@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Polla Rommel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="admin.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-flag"></div>
+      <div class="brand-text">
+        <span class="brand-title">Panel Administrador</span>
+        <span class="brand-subtitle">Polla Elecciones 2025 de Rommel</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-container">
+    <section class="card">
+      <h1>Panel administrador</h1>
+      <p class="lead">
+        Ingresa el porcentaje <strong>real</strong> de votos de cada candidatura.
+      </p>
+      <p class="lead">
+        <code>Score = √( ∑ (Predicción − Real)² )</code> · gana quien tenga el score más bajo.
+      </p>
+
+      <h3>Porcentajes reales</h3>
+      <div id="real-inputs" class="candidates-grid"></div>
+
+      <div class="actions-row">
+        <button id="save-real-btn" class="btn btn-primary">
+          Guardar reales y recalcular ranking
+        </button>
+      </div>
+
+      <p id="admin-msg" class="note"></p>
+
+      <div class="summary-box" style="margin-top:1.5rem;">
+        <h3>Ranking de participantes (vista admin)</h3>
+        <table class="summary-table" id="ranking-table">
+          <thead>
+            <tr>
+              <th>Posición</th>
+              <th>Participante</th>
+              <th>Score (√∑ errores²)</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="actions-row" style="margin-top:1.5rem;">
+        <button id="download-excel-btn" class="btn btn-secondary">
+          Descargar Excel
+        </button>
+        <button id="reset-excel-btn" class="btn btn-secondary">
+          Reiniciar Excel
+        </button>
+      </div>
+
+      <p class="note">
+        Este panel no tiene password, cuida la URL 😉
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Polla Elecciones 2025 de Rommel · Panel admin</span>
+  </footer>
+</body>
+</html>

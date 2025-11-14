@@ -1,0 +1,426 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  background: linear-gradient(135deg, #0b3b7a 0%, #e4e7ee 60%, #b91c1c 100%);
+  color: #1f2933;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER estilo "institucional" */
+.site-header {
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  border-bottom: 3px solid #0b3b7a;
+  padding: 0.75rem 1.25rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.brand-flag {
+  width: 42px;
+  height: 28px;
+  background: linear-gradient(
+    to bottom,
+    #0b3b7a 0 45%,
+    #ffffff 45% 55%,
+    #b91c1c 55% 100%
+  );
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px #94a3b8;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.brand-subtitle {
+  font-size: 0.8rem;
+  color: #4b5563;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.app-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+}
+
+.card {
+  background: #ffffffee;
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+  max-width: 920px;
+  width: 100%;
+  backdrop-filter: blur(4px);
+}
+
+.step {
+  display: none;
+}
+
+.active-step {
+  display: block;
+}
+
+/* TIPOGRAFÍA Y TEXTOS */
+h1,
+h2,
+h3 {
+  color: #0b3b7a;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+.lead {
+  font-size: 0.98rem;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.disclaimer,
+.note {
+  font-size: 0.78rem;
+  color: #6b7280;
+  margin-top: 1rem;
+}
+
+/* CAMPOS E INPUTS */
+.field-label {
+  display: block;
+  margin: 1rem 0 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.text-input {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.95rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: #0b3b7a;
+  box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.15);
+}
+
+/* CANDIDATOS GRID */
+.candidates-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.candidate-row {
+  display: grid;
+  grid-template-columns: minmax(0, 2.5fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.candidate-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.percent-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.percent-input {
+  flex: 1;
+  padding: 0.45rem 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.percent-input:focus {
+  outline: none;
+  border-color: #0b3b7a;
+  box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.15);
+}
+
+.percent-suffix {
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+/* TOTAL */
+.total-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.total-value {
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #0b3b7a;
+  color: #f9fafb;
+}
+
+/* MENSAJES */
+.error-msg,
+.warning-msg {
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+}
+
+.error-msg {
+  color: #b91c1c;
+}
+
+.warning-msg {
+  color: #92400e;
+}
+
+/* BOTONES */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease,
+    background-color 0.15s ease, color 0.15s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #0b3b7a;
+  color: #f9fafb;
+  box-shadow: 0 10px 16px rgba(15, 23, 42, 0.35);
+}
+
+.btn-primary:hover {
+  background: #062247;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.45);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 12px rgba(15, 23, 42, 0.3);
+}
+
+.btn-strong {
+  font-weight: 700;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #111827;
+  box-shadow: 0 4px 8px rgba(148, 163, 184, 0.4);
+}
+
+.btn-secondary:hover {
+  background: #d1d5db;
+  transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* FILA DE ACCIONES */
+.actions-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+/* TABLAS DE RESUMEN */
+.summary-box {
+  margin-top: 1.1rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  padding: 0.9rem;
+}
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+  margin-top: 0.4rem;
+}
+
+.summary-table th,
+.summary-table td {
+  padding: 0.5rem 0.4rem;
+  text-align: left;
+}
+
+.summary-table thead {
+  background: #e5e7eb;
+}
+
+.summary-table tbody tr:nth-child(even) {
+  background: #f3f4f6;
+}
+
+.summary-table tfoot td {
+  font-weight: 700;
+  border-top: 2px solid #0b3b7a;
+}
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.75rem;
+  color: #e5e7eb;
+}
+
+/* PANEL DE RESULTADOS (TABLA / RANKING) */
+.results-wrapper {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.results-table-container {
+  position: relative;
+  overflow-x: auto;
+  max-height: 420px;
+}
+
+.results-table th {
+  background: #0b3b7a;
+  color: #f9fafb;
+}
+
+/* Fila de encabezado de participantes */
+.results-table thead tr th:first-child {
+  background: #111827;
+}
+
+/* Fila de resultados reales */
+.real-row {
+  background: #fef3c7 !important; /* amarillo suave */
+  font-weight: 600;
+}
+
+/* Celdas borrosas (porcentaje y puntaje) */
+.cell-blurred {
+  filter: blur(6px);
+  color: transparent;
+  text-shadow: 0 0 8px rgba(15, 23, 42, 0.6);
+}
+
+/* Overlay por encima cuando está bloqueado */
+.results-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.overlay-content {
+  background: rgba(15, 23, 42, 0.86);
+  color: #f9fafb;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 80%;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (min-width: 640px) {
+  .card {
+    padding: 2rem 2.2rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.55rem;
+  }
+
+  .candidates-grid {
+    gap: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .candidate-row {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+  }
+
+  .actions-row {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

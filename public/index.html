@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Polla Elecciones 2025 de Rommel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-flag"></div>
+      <div class="brand-text">
+        <span class="brand-title">Polla Elecciones 2025</span>
+        <span class="brand-subtitle">Precisión y Constancia*</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-container">
+    <!-- PASO 1 -->
+    <section id="step-1" class="card step active-step">
+      <h1>Bienvenido a la Polla Elecciones 2025 de Rommel</h1>
+      <p class="lead">
+        Sabemos que te gusta la Polla! Para inscribirte, por favor escribe tu nombre.
+      </p>
+
+      <label for="nombre-participante" class="field-label">Nombre</label>
+      <input id="nombre-participante" type="text" class="text-input" placeholder="Ej: Herni Perni" />
+      <p id="step1-error" class="error-msg"></p>
+
+      <button id="step1-next" class="btn btn-primary">Continuar</button>
+
+      <p class="disclaimer">
+        *Sitio de exclusivo uso para Rommelianos.
+      </p>
+    </section>
+
+    <!-- PASO 2 -->
+    <section id="step-2" class="card step">
+      <h2>Ingresa tus proyecciones</h2>
+      <p class="lead">
+        <span id="nombre-resumen"></span>, indica el porcentaje de votos esperado
+        para cada candidatura, con <strong>1 decimal</strong>.
+      </p>
+
+      <div id="candidates-container" class="candidates-grid"></div>
+
+      <div class="total-wrapper">
+        <span>Total declarado:</span>
+        <span id="total-porcentaje" class="total-value">0.0 %</span>
+      </div>
+      <p id="step2-warning" class="warning-msg"></p>
+
+      <div class="actions-row">
+        <button id="step2-back" class="btn btn-secondary">Volver</button>
+        <button id="step2-next" class="btn btn-primary">Continuar a confirmación</button>
+      </div>
+
+      <p class="note">
+        Puedes ajustar tus porcentajes más adelante, antes de confirmar.
+      </p>
+    </section>
+
+    <!-- PASO 3 -->
+    <section id="step-3" class="card step">
+      <h2>Confirma tu participación</h2>
+      <p class="lead">Revisa tus proyecciones para la Polla Elecciones 2025 de Rommel.</p>
+
+      <div class="summary-box">
+        <h3>Tus proyecciones</h3>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>Candidatura</th>
+              <th>Porcentaje proyectado</th>
+            </tr>
+          </thead>
+          <tbody id="summary-body"></tbody>
+          <tfoot>
+            <tr>
+              <td>Total</td>
+              <td id="summary-total">0.0 %</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <p id="step3-warning" class="warning-msg"></p>
+
+      <div class="actions-row">
+        <button id="step3-edit" class="btn btn-secondary">Volver a editar</button>
+        <button id="step3-confirm" class="btn btn-primary btn-strong">Confirmar y participar</button>
+      </div>
+    </section>
+
+    <!-- PASO 4 -->
+    <section id="step-4" class="card step">
+      <h2>¡Felicitaciones!</h2>
+      <p class="lead">Ya estás participando en la <strong>Polla Rommel</strong>.</p>
+
+      <p>Estas son tus proyecciones declaradas:</p>
+
+      <div class="summary-box">
+        <h3>Resumen final de tus proyecciones</h3>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>Candidatura</th>
+              <th>Porcentaje proyectado</th>
+            </tr>
+          </thead>
+          <tbody id="final-summary-body"></tbody>
+          <tfoot>
+            <tr>
+              <td>Total</td>
+              <td id="final-summary-total">0.0 %</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <div class="actions-row">
+        <a href="/ranking" class="btn btn-primary">Ver ranking y pronósticos</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Polla Elecciones 2025 de Rommel · Uso recreativo</span>
+  </footer>
+</body>
+</html>
