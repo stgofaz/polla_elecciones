@@ -14,9 +14,9 @@ const CANDIDATES = [
   "Franco Parisi",
   "Jeannette Jara",
   "Marco Enriquez-Ominami",
-  "Johannes Kaiser"
+  "Johannes Kaiser",
   "José Antonio Kast",
-  "Eduardo Artés"
+  "Eduardo Artés",
   "Evelyn Mathei",
   "Harold Mayne-Nicholls",
   "Blanco/Nulo",
